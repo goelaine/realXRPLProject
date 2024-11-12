@@ -24,15 +24,15 @@ To run this project locally, follow these steps:
 
 Clone the Repository:
 
-git clone https://github.com/your-username/xrp-wallet-generator.git
-cd xrp-wallet-generator
+`git clone https://github.com/your-username/xrp-wallet-generator.git`
+`cd xrp-wallet-generator`
 
 Install Dependencies: 
 
-npm install
+`npm install`
 
-
-npm start
+Create local instance:
+`npm start`
 Open in Browser: Navigate to http://localhost:3000 in your browser to interact with the application.
 
 # Getting Started with Create React App
