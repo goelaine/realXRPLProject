@@ -31,9 +31,7 @@ Install Dependencies:
 
 `npm install`
 
-Create local instance:
-`npm start`
-Open in Browser: Navigate to http://localhost:3000 in your browser to interact with the application.
+
 
 # Getting Started with Create React App
 
