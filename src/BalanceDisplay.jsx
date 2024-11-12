@@ -16,18 +16,14 @@
 // Sequence Number
 // 2228125
 
-import React, { useState } from 'react'; //useState stores client side states
+import React, { useState } from 'react'; // useState stores client side states
 import { Client, Wallet } from 'xrpl';
+import SendXRP from './SendXRP';
 
 const BalanceDisplay = () => {
     // track state of these 3 things
-    const [userWalletAddress, setWalletAddress] = useState('');
     const [secret, setSecret] = useState('');
     const [balance, setBalance] = useState('');
-
-    const handleAddressChange = (e) => {
-        setWalletAddress(e.target.value);
-    };
 
     const handleSecretChange = (e) => {
         setSecret(e.target.value);
@@ -59,12 +55,6 @@ const BalanceDisplay = () => {
         <div>
             <h1>XRPL Wallet Balance</h1>
             <input
-                type="text"
-                placeholder="Enter wallet address"
-                value={userWalletAddress}
-                onChange={handleAddressChange}
-            />
-            <input
                 type="password"
                 placeholder="Enter secret key"
                 value={secret}
@@ -72,8 +62,10 @@ const BalanceDisplay = () => {
             />
             <button onClick={fetchBalance}>Check Balance</button>
             <h2>Balance: {balance}</h2>
+            <SendXRP fetchBalance={fetchBalance} senderSeed={secret} /> 
         </div>
     );
 };
+
 
 export default BalanceDisplay;

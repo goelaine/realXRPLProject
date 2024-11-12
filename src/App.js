@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import BalanceDisplay from './BalanceDisplay';
+import SendXRP from './SendXRP';
 
 function App() {
   return (
