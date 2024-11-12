@@ -1,27 +1,10 @@
-// Address
-// rEQ5EjkbtnCZqpAjig6oshmPuRk8uH8Qas
-// Secret
-// sEdS2zTGTUX5NPGKPpUiiEWUr6UbK9B
-// Balance
-// 100 XRP
-// Sequence Number
-// 2228105
-
-// Address
-// rEm6YRsvQmXcFZD2s8VsmsWTtr3719fqBF
-// Secret
-// sEdS4HHrvTdRhESBP2qhMCBcN6AGoDG
-// Balance
-// 100 XRP
-// Sequence Number
-// 2228125
-
-import React, { useState } from 'react'; // useState stores client side states
+import React, { useState } from 'react';
 import { Client, Wallet } from 'xrpl';
 import SendXRP from './SendXRP';
+import Flower from './Flower';  // Import the Flower component
+import './BalanceDisplay.css'
 
 const BalanceDisplay = () => {
-    // track state of these 3 things
     const [secret, setSecret] = useState('');
     const [balance, setBalance] = useState('');
 
@@ -30,12 +13,10 @@ const BalanceDisplay = () => {
     };
 
     const fetchBalance = async () => {
-        // connect to testnet
         const client = new Client('wss://s.altnet.rippletest.net:51233');
         await client.connect();
 
         try {
-            // access wallet using secret
             const userWallet = Wallet.fromSecret(secret);
             const accountInfo = await client.request({
                 command: 'account_info',
@@ -52,7 +33,7 @@ const BalanceDisplay = () => {
     };
 
     return (
-        <div>
+        <div className="balance-display">
             <h1>XRPL Wallet Balance</h1>
             <input
                 type="password"
@@ -63,9 +44,9 @@ const BalanceDisplay = () => {
             <button onClick={fetchBalance}>Check Balance</button>
             <h2>Balance: {balance}</h2>
             <SendXRP fetchBalance={fetchBalance} senderSeed={secret} /> 
+            <Flower balance={balance} />  {/* The flower component */}
         </div>
     );
 };
-
 
 export default BalanceDisplay;

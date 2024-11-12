@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* General styles for the app */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
 }
 
+/* Centering the app container */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Styling the logo */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-bottom: 20px;
 }
 
+/* Animation for logo spinning */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styles */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #004f85;
+  color: white;
+  width: 100%;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
+/* Link styling */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .App-header {
+    font-size: 18px;
+    padding: 30px 0;
+  }
+}
+
+/* Keyframes for spinning logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Styling for the wallet generation button */
+.generate-wallet button {
+  background-color: #004f85;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-wallet button:hover {
+  background-color: #003f6d;
+}
+
+/* Styling for the wallet credentials */
+.wallet-info {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.wallet-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+/* Faucet request status */
+.faucet-status {
+  margin-top: 20px;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.faucet-status.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.faucet-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Styling for the BalanceDisplay component */
+/* App.css */
+.balance-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  /* Align children vertically */
+  margin-top: 20px;  /* Adjust this value as needed to move everything down */
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.send-xrp-container {
+  margin-top: 40px;  /* Add space below the flower, preventing overlap with "Send XRP" button */
+}
+
+input,
+button {
+  margin: 10px 0;  /* Add spacing around inputs and buttons */
+}
+
+
+.balance-display h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #004f85;
+}
+
+.balance-display input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.balance-display button {
+  background-color: #004f85;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.balance-display button:hover {
+  background-color: #003f6d;
+}
+
+.balance-display h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Additional responsiveness for smaller screens */
+@media (max-width: 480px) {
+  .balance-display {
+    width: 95%;
+  }
+
+  .balance-display button {
+    width: 100%;
   }
 }

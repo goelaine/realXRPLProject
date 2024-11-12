@@ -1,0 +1,35 @@
+/* Flower.css */
+.flower-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;  /* Add space between flower and other content */
+  }
+  
+  .flower {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .flower-container:hover .flower {
+    transform: scale(1.1); /* Grow slightly on hover for interactivity */
+  }
+  
+  /* Optional animations for wilting and growing */
+  @keyframes wilt {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes grow {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

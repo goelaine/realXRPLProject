@@ -1,0 +1,61 @@
+/* balance-display.css */
+.balance-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;  /* Adjust the space at the top of the page */
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .balance-display h1 {
+    margin-bottom: 20px;  /* Space between title and input */
+  }
+  
+  input, button {
+    margin: 10px 0;  /* Space between input and button */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  h2 {
+    margin-top: 10px;  /* Add some space between the balance and flower */
+  }
+  
+  /* SendXRP container */
+  .send-xrp-container {
+    margin-top: 30px;  /* Add margin to separate from flower */
+  }
+  
+  /* Flower positioning */
+  .flower-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;  /* Move flower down to create space between it and other elements */
+  }
+  
+  .flower {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .flower-container:hover .flower {
+    transform: scale(1.1);  /* Flower grows slightly on hover */
+  }
+  

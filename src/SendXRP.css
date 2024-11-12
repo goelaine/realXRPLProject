@@ -1,0 +1,48 @@
+/* Style for the loading indicator */
+.loading-indicator {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .loading-indicator::before {
+    content: '';
+    border: 4px solid transparent;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Flower positioning adjustments */
+  .flower-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;  /* Space between flower and other components */
+    position: relative; /* Allows layering of flower and loading spinner */
+    z-index: 1; /* Default z-index to ensure it stays below the loading message */
+  }
+  
+  /* Ensure flower image or graphic doesn't block the loading message */
+  .flower {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative; /* Keep it inside its container without overlapping other elements */
+    z-index: 1; /* Keep flower under the loading spinner */
+  }
+  
+  /* In case you want to layer the flower and spinner, you can adjust z-index */
+  .loading-indicator {
+    z-index: 2; /* Loading spinner is on top of the flower */
+  }
+  
