@@ -45,9 +45,7 @@ const SendXRP = ({ fetchBalance, senderSeed }) => {
             console.log('Error sending XRP:', error);
             setMessage(`Error sending XRP: ${error.message}`); // Display error message
 
-            setTimeout(() => {
-                setMessage('');
-            }, 5000); // Clear error message after 5 seconds
+
         } finally {
             setIsLoading(false); // Set loading to false when transaction is complete
             await client.disconnect();

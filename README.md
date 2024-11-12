@@ -1,3 +1,15 @@
+# Inspiration
+Beginning this program knowing close to nothing about blockchain, XRP, and building fullstack projects in general, I knew I wanted to take it easy. Given blockchain's association with financial technology, I thought it'd be fun to implement a personal wallet that 
+
+# What it does
+# How I built it
+Emma deserves so much credit for helping me get started and introducing me to react.js.
+The front-end UI and managing client-side states are all done through react. Using the xrpl.js package, I was able to bring xrpl technology to the frontend, allowing the user to display and manipulate its states. The wallets come from the XRP Testnet faucet. CSS was then used to add instructions, make the UI more pleasing to the eye, and add the fun little flower animation. 
+# Challenges I ran into
+The biggest challenges I ran into arose from time constraints and having this be my first time building a project on my own from scratch. Again, thank you to Emma for all her guidance in getting a repo set up with react.js. 
+# What I learned
+Because I am a beginner, there was so much to learn! From
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
