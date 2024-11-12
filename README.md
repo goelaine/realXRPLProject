@@ -19,6 +19,22 @@ Again, thank you to Emma for all her guidance in getting a repo set up and guidi
 # What I learned
 Because I am a beginner, there was so much to learn! From what blockchain is and its benefits to implementing a fullstack project to package managers to deployment -- everything I did in this project was brand new to me (except git)!
 
+# Running this repo locally
+To run this project locally, follow these steps:
+
+Clone the Repository:
+
+git clone https://github.com/your-username/xrp-wallet-generator.git
+cd xrp-wallet-generator
+
+Install Dependencies: 
+
+npm install
+
+
+npm start
+Open in Browser: Navigate to http://localhost:3000 in your browser to interact with the application.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
