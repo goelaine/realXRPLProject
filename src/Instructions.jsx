@@ -12,6 +12,7 @@ function Instructions() {
         <li><strong>Step 2:</strong> <em>View Your Balance</em> After logging into your wallet, your XRP balance will be displayed below. </li>
         <li><strong>Step 3:</strong> <em>Send XRP</em> To send XRP, enter the recipient's address, specify the amount, and press 'send XRP'! This will automatically deduct your wallet balance.</li>
         <li><strong>Step 4:</strong> <em>Receive XRP</em> To receive XRP, beg someone to send you some and provide them with your wallet address. Then, click 'check balance' to reveal the good news.</li>
+        <li><strong>Step 5:</strong> <em>Receive XRP</em> Grow your flower pet! If you have more XRP, your flower will grow bigger. Don't let it shrink!</li>
       </ul>
     </section>
   );

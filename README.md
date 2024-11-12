@@ -1,14 +1,23 @@
 # Inspiration
-Beginning this program knowing close to nothing about blockchain, XRP, and building fullstack projects in general, I knew I wanted to take it easy. Given blockchain's association with financial technology, I thought it'd be fun to implement a personal wallet that 
+Beginning this program knowing close to nothing about blockchain, XRP, and building fullstack projects in general, I knew I wanted to take it easy. Given blockchain's association with financial technology, I thought it'd be fun to implement a personal wallet that tells you all the information you need, all the while keeping it engaging, rewarding, and interactive so that asset management is not a chore! This is the bare beginnings of that project.
 
 # What it does
+This is primarily a personal wallet UI that displays information about your XRP account. It includes the following features:
+- Generate Wallet: Creating new wallets on XRP Testnet Faucet. To increase security, the secret key of your new wallet disappears in 30 seconds after generation. 
+- Balance Display: After logging into your wallet with the secret key, your XRP balance will be displayed.
+- Sending XRP to others: To send XRP, enter the recipient's address, specify the amount, and press 'send XRP'! This will automatically deduct your wallet balance. Since this often takes a moment, there is a 'Loading...' symbol that lets you know if your click registered. 
+- Receive XRP: If someone else sends you XRP, it will update the balance once you click the button again
+- Flower Pet: If you have more XRP, your flower will grow bigger. And if you have less XRP, your flower will grow smaller. This feature is intended to encourage people to take care of their flower pet and save up. 
+
+
 # How I built it
 Emma deserves so much credit for helping me get started and introducing me to react.js.
 The front-end UI and managing client-side states are all done through react. Using the xrpl.js package, I was able to bring xrpl technology to the frontend, allowing the user to display and manipulate its states. The wallets come from the XRP Testnet faucet. CSS was then used to add instructions, make the UI more pleasing to the eye, and add the fun little flower animation. 
 # Challenges I ran into
-The biggest challenges I ran into arose from time constraints and having this be my first time building a project on my own from scratch. Again, thank you to Emma for all her guidance in getting a repo set up with react.js. 
+The biggest challenges I ran into arose from time constraints and having this be my first time building a project on my own from scratch. As I'm overcoming that steep learning curve, I think of more ideas and possibilities of what I can do. 
+Again, thank you to Emma for all her guidance in getting a repo set up and guiding me through integrating with XRP. 
 # What I learned
-Because I am a beginner, there was so much to learn! From
+Because I am a beginner, there was so much to learn! From what blockchain is and its benefits to implementing a fullstack project to package managers to deployment -- everything I did in this project was brand new to me (except git)!
 
 # Getting Started with Create React App
 
